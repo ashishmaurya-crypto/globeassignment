@@ -44,3 +44,51 @@
         }
     }
 }
+
+.create-post-container{
+    .back-btn{
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.edit-input {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    padding: 10px 0px 10px 0px;
+
+    .labal {
+        text-align: start;
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 0.5rem;
+    }
+
+    .email-input {
+        width: 100%;
+        border: none;
+        padding: 8px;
+        border-radius: 4px;
+        margin-top: 0.3rem;
+        background-color: rgb(246, 246, 246);
+    }
+
+    .add-btn {
+        background-color: #FFF2F2;
+        border: 1px solid #FFF2F2;
+        color: rgb(203, 10, 10) !important;
+        border-radius: 4px;
+        padding: 6px;
+        margin-top: 1.5rem;
+        font-weight: 600;
+
+        svg {
+            stroke: currentcolor;
+            fill: rgb(203, 10, 10) !important;
+            stroke-width: 0;
+            height: 1em;
+            width: 1em;
+        }
+    }
+}
