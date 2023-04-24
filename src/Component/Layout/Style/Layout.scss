@@ -1,0 +1,25 @@
+.layout-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #EFF2F9;
+    overflow: hidden;
+    padding: 0%;
+}
+
+
+.main-container{
+    background-color: #EFF2F9;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: 0.8rem;
+
+    .outlet-container{
+        width: 100%;
+        min-height: 85vh;
+        max-height: 85vh;
+        overflow: scroll;
+        overflow-x: hidden;
+        background-color: white;
+        border-radius: 15px;
+    }
+}
