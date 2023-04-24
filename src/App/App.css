@@ -18,7 +18,7 @@ input {
 
 input:focus {
   outline: 2px solid #d7e0f5;
-  background-color: #cac9c9;
+  background-color: #f7f6f6;
 }
 
 textarea{
@@ -33,7 +33,7 @@ textarea{
 
 textarea:focus {
   outline: 2px solid #d7e0f5;
-  background-color: #cac9c9;
+  background-color: #f7f6f6;
 }
 
 
@@ -83,6 +83,13 @@ h5 {
   background-color: #d7e0f5;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 5px;
+}
+
+.save-btn{
+  padding: 3px 15px 3px 15px;
+  border-radius: 6px;
+  border: 1px solid whitesmoke;
+  margin-top: 1em;
 }
 
 

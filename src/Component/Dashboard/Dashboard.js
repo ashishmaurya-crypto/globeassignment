@@ -13,7 +13,8 @@ class Dashboard extends Component {
     super(props)
     this.state = {
       data: [],
-      isEdit: "",
+      isEdit: true,
+      isEditID: "",
       isAddPost: false,
       setTitle: "",
       setBody: "",
@@ -81,7 +82,7 @@ class Dashboard extends Component {
             {this.state.data.length ? this.state.data.map((item, index) =>
               <div key={item.id} className='post-container'>
                 <div className='d-flex justify-content-end'>
-                  <button className='universal-button' onClick={() => this.setState({ isEdit: item.id })} ><Assest.HiPencil /></button>
+                  <button className='universal-button' onClick={() => this.setState({ isEditID: item.id })} >{this.state.isEditID === item.id ? <Assest.EditPencil /> : <Assest.HiPencil />}</button>
                   <button className='universal-button' onClick={() => this.deletedata(index)}><Assest.MdDelete /></button>
                 </div>
                 <div className='d-flex title-box justify-content-start'>
@@ -89,7 +90,7 @@ class Dashboard extends Component {
                     <h5>Title :</h5>
                   </div>
                   <div className='title-body'>
-                    {this.state.isEdit == item.id ?
+                    {this.state.isEditID === item.id ?
                       <input
                         value={item.title}
                         onChange={(event) => this.editTitlepost(event.target.value, index)}
@@ -104,7 +105,7 @@ class Dashboard extends Component {
                     <h5>Body :</h5>
                   </div>
                   <div className='title-body'>
-                    {this.state.isEdit == item.id ?
+                    {this.state.isEditID === item.id ?
                       <textarea
                         value={item.body}
                         onChange={(event) => this.editBodypost(event.target.value, index, 'title')}
@@ -114,6 +115,9 @@ class Dashboard extends Component {
                     }
 
                   </div>
+                </div>
+                <div>
+                  {this.state.isEditID === item.id ? <button className='save-btn' onClick={()=> this.setState({ isEditID: "" })}>Save</button> : null}
                 </div>
               </div>) :
               <h1>No Data Available</h1>}

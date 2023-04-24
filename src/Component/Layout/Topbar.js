@@ -41,7 +41,7 @@ export class Topbar extends Component {
                             </Col>
                             <Col className='px-4 d-flex justify-content-end align-items-center'>
                                 <span onClick={() => this.showProfile()}>
-                                    <Assest.CgProfile className='profile-img' />
+                                    <img src={Assest.CgProfile} alt="logo" />
                                     {this.state.isProfileOpen ? <Assest.GoChevronDown fill='white' /> : <Assest.GoChevronUp fill='white' />}
                                 </span>
 
@@ -57,7 +57,7 @@ export class Topbar extends Component {
                             </Col>
                             <Col className='d-flex justify-content-end align-items-center'>
                                 <span className='d-flex align-items-center' onClick={() => this.showProfile()}>
-                                    <Assest.CgProfile className='profile-img' />
+                                    <img src={Assest.CgProfile} alt="logo" />
                                     {this.state.isProfileOpen ? <Assest.GoChevronDown /> : <Assest.GoChevronUp />}
                                 </span>
                             </Col>
@@ -82,7 +82,7 @@ export class Topbar extends Component {
                         <Assest.BsSearch className='Searchbar-img' fill='gray' />
                         <input className='Searchbar-input' placeholder='Search...' />
                     </div>
-                    <Sidebar onClose={()=> this.setState({ isShowSidebar: false })} />
+                    <Sidebar onClose={() => this.setState({ isShowSidebar: false })} />
                 </SidebarModel>
             </>
         )

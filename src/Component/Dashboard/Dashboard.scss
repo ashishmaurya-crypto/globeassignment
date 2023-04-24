@@ -22,24 +22,7 @@
             .title-body{
                 width: 200px;
                 height: auto;
-            }
-        }
-
-        .body-box{
-            width: 350px;
-            height: auto;
-            margin-top: 1rem;
-
-            .body-head{
-                width: 100px;
-                height: auto;
-                margin-left: 10px;
-                text-align: start;
-            }
-
-            .body-body{
-                width: 200px;
-                height: auto;
+                overflow: hidden;
             }
         }
     }
