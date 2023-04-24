@@ -13,7 +13,6 @@ class Dashboard extends Component {
     super(props)
     this.state = {
       data: [],
-      isEdit: true,
       isEditID: "",
       isAddPost: false,
       setTitle: "",
@@ -96,7 +95,6 @@ class Dashboard extends Component {
                         onChange={(event) => this.editTitlepost(event.target.value, index)}
                         placeholder='Title' /> :
                       <p className='text-align'>{item.title}</p>
-
                     }
                   </div>
                 </div>
@@ -113,7 +111,6 @@ class Dashboard extends Component {
                       /> :
                       <p className='text-align'>{item.body}</p>
                     }
-
                   </div>
                 </div>
                 <div>
