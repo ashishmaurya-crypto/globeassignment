@@ -1,4 +1,4 @@
-import React, { Component , Suspensegit } from 'react';
+import React, { Component , Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Container, Row } from 'reactstrap';
 import './Style/Layout.scss';
