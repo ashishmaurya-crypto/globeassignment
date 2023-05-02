@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Login from '../Component/Login/Login';
-import Dashboard from '../Component/Dashboard/Dashboard';
-import Layout from '../Component/Layout/Layout';
-import About from '../Component/About/About';
+const Dashboard = React.lazy(() => import('../Component/Dashboard/Dashboard'));
+const Layout = React.lazy(() => import('../Component/Layout/Layout'));
+const About = React.lazy(() => import('../Component/About/About'));
 
 export class Router extends Component {
     render() {

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import axios from 'axios';
 
 export default function About() {
@@ -13,13 +13,15 @@ export default function About() {
         })
     }, [data])
     return (
-        <div className='d-flex flex-wrap'>
-            {data && data.map((value, index) => 
-            <div key={value.Title} className='mx-2' >
-                <p>{value.Title ? `Title : ${value.Title}` : ""}</p>
-                <p>{value.Poster ? <img src={value.Poster} alt='poster' /> : "Poster : No poster"}</p>
-            </div>)}
+        <Suspense fallback="loading...">
+            <div className='d-flex flex-wrap'>
+                {data && data.map((value, index) =>
+                    <div key={value.Title} className='mx-2' >
+                        <p>{value.Title ? `Title : ${value.Title}` : ""}</p>
+                        <p>{value.Poster ? <img src={value.Poster} alt='poster' /> : "Poster : No poster"}</p>
+                    </div>)}
 
-        </div>
+            </div>
+        </Suspense>
     )
 }
