@@ -17,7 +17,7 @@ export default function About() {
             {data && data.map((value, index) => 
             <div key={value.Title} className='mx-2' >
                 <p>{value.Title ? `Title : ${value.Title}` : ""}</p>
-                <p>{value.Poster ? <img src={value.Poster} /> : "Poster : No poster"}</p>
+                <p>{value.Poster ? <img src={value.Poster} alt='poster' /> : "Poster : No poster"}</p>
             </div>)}
 
         </div>
