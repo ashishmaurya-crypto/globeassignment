@@ -32,7 +32,7 @@ export class Topbar extends Component {
                     <Container fluid className='topbar-mobile'>
                         <Row className='w-100 d-flex justify-content-center align-items-center'>
                             <Col className='d-flex justify-content-start align-items-center'>
-                                <Assest.HamburgerMenu fill='white' onClick={() => this.setState({ isShowSidebar: !this.state.isShowSidebar })} />
+                                <Assest.HamburgerMenu className='cursor' fill='white' onClick={() => this.setState({ isShowSidebar: !this.state.isShowSidebar })} />
                                 &nbsp;&nbsp;
                                 <img width={70} alt="logo" src={Assest.logo} />
                             </Col>
