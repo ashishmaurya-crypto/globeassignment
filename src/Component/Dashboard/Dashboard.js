@@ -69,7 +69,7 @@ class Dashboard extends Component {
         <Container fluid className='dashboard'>
           <Row>
             <Col className='d-flex justify-content-start'>
-              <h4>Post</h4>
+              <h4>Home</h4>
             </Col>
           </Row>
           <Row className='px-5'>
@@ -125,7 +125,7 @@ class Dashboard extends Component {
             <Row className='mt-4'>
               <Col className='d-flex justify-content-start'>
                 <span className='d-flex align-items-center cursor'><FaLongArrowAltLeft onClick={() => this.setState({ isAddPost: !this.state.isAddPost })} /></span>
-                <span className='mx-2'><h4 className='mt-2'>Create Post</h4></span>
+                <span className='mx-2'><h4 className='mt-2'> Create Post</h4></span>
               </Col>
             </Row>
             <Row>

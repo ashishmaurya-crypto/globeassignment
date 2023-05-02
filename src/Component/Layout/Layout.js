@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { Container, Row } from 'reactstrap';
 import './Style/Layout.scss';
 import Topbar from './Topbar';
-import Sidebar from './Sidebar';
+import Footer from './Footer';
 
 
 class Layout extends Component {
@@ -27,13 +27,13 @@ class Layout extends Component {
                     </Row>
                     <Row className='main-container'>
                         <div className='d-flex p-4'>
-                            <div className='hidden-on-mobile'>
-                                <Sidebar />
-                            </div>
-                            <div className='mx-4 p-4 border outlet-container'>
+                            <div className='p-4 border outlet-container'>
                                 <Outlet />
                             </div>
                         </div>
+                    </Row>
+                    <Row>
+                        <Footer />
                     </Row>
                 </Container>
             </>

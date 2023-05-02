@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import Login from '../Component/Login/Login';
 import Dashboard from '../Component/Dashboard/Dashboard';
 import Layout from '../Component/Layout/Layout';
+import About from '../Component/About/About';
 
 export class Router extends Component {
     render() {
@@ -15,12 +16,9 @@ export class Router extends Component {
                         <Route element={<Layout/>}>
                             <Route path='/' element={<Dashboard />} />
                             <Route path='/chats' element={<Dashboard />} />
-                            <Route path='/team-members' element={<Dashboard />} />
-                            <Route path='/groups' element={<Dashboard />} />
-                            <Route path='/Brodcasts' element={<Dashboard />} />
-                            <Route path='/awards' element={<Dashboard />} />
-                            <Route path='/about-us' element={<Dashboard />} />
-                            <Route path='/information' element={<Dashboard />} />
+                            <Route path='/admin-members' element={<Dashboard />} />
+                            <Route path='/about' element={<About />} />
+                            <Route path='/contactus' element={<Dashboard />} />
                         </Route>
                     </Routes>
                 </BrowserRouter>
